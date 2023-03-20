@@ -33,7 +33,7 @@ def Height_and_Weight(Height):
 
 def main():
     st.title("Height and Weight")
-    wHeight(Inches) = st.text_input("Height","Type Here")
+    Weight = st.text_input("Height","Type Here")
     
   
     if st.button("Predict"):
