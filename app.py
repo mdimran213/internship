@@ -37,7 +37,7 @@ def main():
     
   
     if st.button("Predict"):
-        result=Sales_Of_Retail_Store([Height])
+        result=Height_and_Weight([Height])
     st.success('The output is {}')
 
 
