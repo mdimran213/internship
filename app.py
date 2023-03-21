@@ -3,17 +3,17 @@ import pickle
 import pandas as pd
 import streamlit as st 
 
-from PIL import Image
+
 
 pickle_in = open("poly.pkl","rb")
-lasso=pickle.load(pickle_in)
+poly=pickle.load(pickle_in)
 
 def welcome():
     return "Welcome All"
 
 def Height_and_Weight(Height):
     
-    """Let's Predict the sales of retail store 
+    """Let's Predict the Height_and_Weight 
     This is using docstrings for specifications.
     ---
     parameters:  
@@ -27,7 +27,7 @@ def Height_and_Weight(Height):
             description: The output values
             
     """
-    prediction=lasso.predict([[Height]])
+    prediction=poly.predict([[Height]])
     print(prediction)
     return prediction
 
@@ -38,7 +38,7 @@ def main():
   
     if st.button("Predict"):
         result=Height_and_Weight([Height])
-    st.success('The output is {}')
+    st.success('The predicted weight is {}'.format(result))
 
 
 if _name=='main_':
