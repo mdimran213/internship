@@ -5,8 +5,8 @@ import streamlit as st
 
 
 
-pickle_in = open("poly.pkl","rb")
-poly=pickle.load(pickle_in)
+pickle = open("poly.pkl","rb")
+poly=pickle.load(pickle)
 
 def welcome():
     return "Welcome All"
